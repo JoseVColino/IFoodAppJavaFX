@@ -383,7 +383,7 @@ private void modificarProdutoRestaurante() {
     // checando se o usuario existe pra entrar no sistema
     @FXML
     void handleEntrar(ActionEvent event) {
-        Usuario usuario = BancoDeDados.encontrarUsuario(loginTextField.getText());
+        Usuario usuario = BancoDeDados.encontrarUsuario(loginTextField.getText(), senhaPasswordField.getText());
         
         if (!(usuario == null)){
             if (usuario instanceof Cliente) {
